@@ -12,16 +12,28 @@
             var myChart = echarts.init(main);
             var option = {
                 title: {
-                    text: 'ECharts 入门示例'
+                    text: 'bar'
                 },
-                tooltip: {},
+                // 工具箱
+                toolbox: {
+                  show: true,
+                  feature: {
+                      saveAsImage: {
+                          show: true
+                      }
+                  }
+                },
+                // 图例
                 legend: {
                     data:['销量']
                 },
+                // x轴
                 xAxis: {
                     data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
                 },
+                // y轴
                 yAxis: {},
+                // 数据
                 series: [{
                     name: '销量',
                     type: 'bar',
