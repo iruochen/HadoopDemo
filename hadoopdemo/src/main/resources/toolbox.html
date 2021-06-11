@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="./js/echarts.min.js"></script>
+    </head>
+    <body>
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script>
+            var main = document.getElementById("main");
+            var myChart = echarts.init(main);
+            var option = {
+                // 标题
+                title: {
+                    text: "服装"
+                },
+                show: true,
+                feature: {
+                    saveAsImage: true
+                },
+
+            };
+            myChart.setOption(option);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="./js/echarts.min.js"></script>
+    </head>
+    <body>
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script>
+            var main = document.getElementById("main");
+            var myChart = echarts.init(main);
+            var option = {
+                title: {
+                    text: '某网站用户访问来源数据'
+                },
+                // 显示百分比
+                tooltip: {
+                    trigger:
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'right',
+                    data: ['chrome', '火狐', 'safari', '360', 'qq']
+                },
+                series: [
+                    {
+                        name: '用户来源',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '']
+
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        </script>
+    </body>
+</html>
