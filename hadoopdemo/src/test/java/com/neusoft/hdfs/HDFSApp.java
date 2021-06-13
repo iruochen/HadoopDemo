@@ -70,7 +70,7 @@ public class HDFSApp {
     // 上传文件
     @Test
     public void upload() throws Exception {
-        Path localPath = new Path("cifar-10-python.tar.gz");
+        Path localPath = new Path("words.txt");
         Path hdfsPath = new Path("/");
         fileSystem.copyFromLocalFile(localPath, hdfsPath);
     }
@@ -78,8 +78,8 @@ public class HDFSApp {
     // 下载文件
     @Test
     public void download() throws Exception {
-        Path hdfsPath = new Path("/hadoop-2.6.0-cdh5.7.0.tar.gz");
-        Path localPath = new Path("./down/hadoop-2.6.0-cdh5.7.0.tar.gz");
+        Path hdfsPath = new Path("/output/wc/part-r-00000");
+        Path localPath = new Path("./down/part-r-00000");
         fileSystem.copyToLocalFile(false, hdfsPath, localPath, true);
     }
 }

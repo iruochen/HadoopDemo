@@ -11,8 +11,9 @@
             var main = document.getElementById("main");
             var myChart = echarts.init(main);
             var option = {
+                // 标题
                 title: {
-                    text: 'bar'
+                    text: 'line'
                 },
                 // 工具箱
                 toolbox: {
@@ -25,19 +26,19 @@
                 },
                 // 图例
                 legend: {
-                    data: ['销量']
+                    data:['销量']
                 },
                 // x轴
                 xAxis: {
-                    data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
                 },
                 // y轴
                 yAxis: {},
                 // 数据
                 series: [{
                     name: '销量',
-                    type: 'bar',
-                    data: [5, 20, 36, 10, 10, 20]
+                    type: 'line',
+                    data: [66, 20, 36, 10, 10, 20]
                 }]
             };
             myChart.setOption(option);
